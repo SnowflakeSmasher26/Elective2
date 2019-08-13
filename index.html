@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="charlCalc">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <script src="main.js"></script>  -->
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <script src="angular.js"></script>
+        <script src="main.js"></script>
+        <form name="calc" ng-controller="myController">
+      
+            <!-- <input  name="textview" type="textview" value= "{{ answer }}"  readonly> -->
+       
+       
+        <table border="1" cellspacing="0">
+        <tr>
+            <td colspan="4" >
+                    <input  name="textview" id="inputLabel" type="textview" value= "{{ answer }}" placeholder="0" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><input input type="button" class="button"  value="AC" ng-click="clear()"></td>
+            <td><input input type="button" class="button"  value="&divide" ng-click='pushBtn("/")'></td>
+        </tr>
+            <tr>
+            <td><input type="button" class="button" value="7" ng-click='pushBtn("7")'></td>
+            <td><input type="button" class="button" value="8" ng-click='pushBtn("8")'></td>
+            <td><input type="button" class="button" value="9" ng-click='pushBtn("9")'></td>
+            <td><input type="button" class="button" value="x" ng-click='pushBtn("*")'></td>
+            </tr>
+            <tr>
+            <td><input type="button" class="button" value="4" ng-click='pushBtn("4")'></td>
+            <td><input type="button" class="button" value="5" ng-click='pushBtn("5")'></td>
+            <td><input type="button" class="button" value="6" ng-click='pushBtn("6")'></td>
+            <td><input type="button" class="button" value="-" ng-click='pushBtn("-")'></td>
+            </tr>
+            <tr>
+            <td><input type="button" class="button" value="1" ng-click='pushBtn("1")'></td>
+            <td><input type="button" class="button" value="2" ng-click='pushBtn("2")'></td>
+            <td><input type="button" class="button" value="3" ng-click='pushBtn("3")'></td>
+            <td><input type="button" class="button" value="+" ng-click='pushBtn("+")'></td>
+            </tr>
+            <tr>
+            <td colspan="2"><input type="button" class="button" value="0" ng-click='pushBtn(0)'></td>
+            <td><input type="button" class="button" value="."  ng-click='pushBtn(".")'></td>
+            <td><input type="button" class="button" value="=" ng-click="equal()"></td>
+            </tr>
+    
+        </table>    
+             </form>
+        </div>
+    
+</body>
+</html>
